@@ -1,0 +1,96 @@
+cars = ["[0] Fiat Mobi - 80 R$/ hora", "[1] Fiat Uno 50 R$/ hora", "[2] Spacefox 100 R$/hora",
+                        "[3] Corsa Classic 40 R$/ hora"]
+cars_back = []
+while True:
+        print("Welcome to the Car Rental")
+        print("What do you wish to do? ")
+        first = int(input("0 - See portfolio \ - 1 Rent car \ 2 - Return car  "))
+        if first == 0:
+                for i in cars:
+                        print(i)
+                print("What do you whish to do?")
+                second = int(input("0 - Back \ 1 = exit: "))
+
+                if second == 1:
+                        print("Bye")
+                        break
+                else:
+                        continue
+        if first == 1:
+                for i in cars:
+                        print(i)
+                rent_car = int(input("What what car do you wish to rent? "))
+                cars.pop(rent_car)
+                days = int(input("How many days? "))
+
+                if rent_car == 0:
+                        cars_back.insert(0, "[0] Fiat mobi")
+                        print(f"Congratulation, you just rented a Fiat Mobi, for {days} days. The total {days * 80}R$ ")
+                        print("What do you whish to do?")
+                        second = int(input("0 - Back \ 1 = exit: "))
+                        if second == 1:
+                                print("Bye")
+                                break
+
+                if rent_car == 1:
+                        cars_back.insert(1, "[1] Fiat Uno")
+                        print(f"Congratulation, you just rented a Fiat Uno, for {days} days. The total {days * 50}R$ ")
+                        print("What do you whish to do?")
+                        second = int(input("0 - Back \ 1 = exit: "))
+                        if second == 1:
+                                print("Bye")
+                                break
+                if rent_car == 2:
+                        cars_back.insert(2, "[2] Spacefox")
+                        print(f"Congratulation, you just rented a Spacefox, for {days} days. The total {days * 100}R$ ")
+                        print("What do you whish to do?")
+                        second = int(input("0 - Back \ 1 = exit: "))
+                        if second == 1:
+                                print("Bye")
+                                break
+                if rent_car == 3:
+                        cars_back.insert(3, "[3]Corsa Classic")
+                        print(f"Congratulation, you just rented a Corsa Classic, for {days} days. The total {days * 40}R$ ")
+                        print("What do you whish to do?")
+                        second = int(input("0 - Back \ 1 = exit: "))
+                        if second == 1:
+                                print("Bye")
+                                break
+
+
+        if first == 2:
+                for i in cars_back:
+                        print(i)
+                give_back = int(input("What car do you wish to return? "))
+                if give_back == 0:
+                        cars.insert(0, "[0] Fiat Mobi - 80 R$/ hora")
+                        print("thank you for returning the car")
+                        print("What do you whish to do?")
+                        second = int(input("0 - Back \ 1 = exit: "))
+                        if second == 1:
+                                print("Bye")
+                                break
+                if give_back == 1:
+                        cars.insert(1, "[1] Fiat Uno 50 R$/ hora")
+                        print("thank you for returning the car")
+                        print("What do you whish to do?")
+                        second = int(input("0 - Back \ 1 = exit: "))
+                        if second == 1:
+                                print("Bye")
+                                break
+                if give_back == 2:
+                        cars.insert(2, "[2] Spacefox 100 R$/hora")
+                        print("thank you for returning the car")
+                        print("What do you whish to do?")
+                        second = int(input("0 - Back \ 1 = exit: "))
+                        if second == 1:
+                                print("Bye")
+                                break
+                if give_back == 3:
+                        cars.insert(3, "[3] Corsa Classic 40 R$/ hora")
+                        print("thank you for returning the car")
+                        print("What do you whish to do?")
+                        second = int(input("0 - Back \ 1 = exit: "))
+                        if second == 1:
+                                print("Bye")
+                                break
